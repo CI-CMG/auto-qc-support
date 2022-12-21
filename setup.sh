@@ -107,6 +107,26 @@ then
   wget https://s3-us-west-2.amazonaws.com/autoqc/climatological_t_median_and_amd_for_aqc.nc
 fi
 
+if [ ! -f GRID_MIN_MAX.nc ]
+then
+  wget https://auto-qc-data.s3.us-west-2.amazonaws.com/GRID_MIN_MAX.nc
+fi
+
+if [ ! -f info_DGG4H6.mat ]
+then
+  wget https://auto-qc-data.s3.us-west-2.amazonaws.com/info_DGG4H6.mat
+fi
+
+if [ ! -f TEMP_MIN_MAX.nc ]
+then
+  wget https://auto-qc-data.s3.us-west-2.amazonaws.com/TEMP_MIN_MAX.nc
+fi
+
+if [ ! -f global_mean_median_quartiles_medcouple_smoothed.nc ]
+then
+  wget https://auto-qc-data.s3.us-west-2.amazonaws.com/global_mean_median_quartiles_medcouple_smoothed.nc
+fi
+
 if [[ -z "${OCEANSDB_DIR}" ]]
 then	
   print 'Action Item - add to .bashrc / .zshrc : export OCEANSDB_DIR="$AUTO_QC_HOME/AutoQC/data'
