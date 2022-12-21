@@ -28,7 +28,7 @@ pip3 install gsw==3.0.3 \
             numpy==1.19.1 \
             xarray==0.16.1
 
-export wd=$(pwd)
+wd=$(pwd)
 
 cd "$AUTO_QC_HOME"
 
