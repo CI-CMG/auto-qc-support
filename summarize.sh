@@ -14,6 +14,6 @@ table=$1
 
 cd "$AUTO_QC_HOME/AutoQC"
 
-python3 summarize-results.py -d $table
+python summarize-results.py -d $table
 
 cd "$wd"

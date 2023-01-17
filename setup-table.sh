@@ -15,6 +15,6 @@ table=$2
 
 cd "$AUTO_QC_HOME/AutoQC"
 
-python3 build-db.py -i "$file" -d $table
+python build-db.py -i "$file" -d $table
 
 cd "$wd"

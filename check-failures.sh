@@ -19,7 +19,7 @@ table=$2
 cd "$AUTO_QC_HOME/AutoQC"
 
 set +e
-python3 "$wd/check-failures.py" -d $table -o "$dir"
+python "$wd/check-failures.py" -d $table -o "$dir"
 retVal=$?
 cd "$wd"
 exit $retVal

@@ -15,6 +15,6 @@ cores=$2
 
 cd "$AUTO_QC_HOME/AutoQC"
 
-python3 AutoQC.py -l "$AUTO_QC_HOME/AutoQClogs" -d $table -n $cores
+python AutoQC.py -l "$AUTO_QC_HOME/AutoQClogs" -d $table -n $cores
 
 cd "$wd"

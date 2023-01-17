@@ -38,7 +38,7 @@ for path in $(find "$ascii_dir"); do
     outdir="$report_dir/$dataset/$t"
     echo "QC: path=$path filename=$filename outdir=$outdir"
     ./setup-table.sh "$path" "$filename"
-    count=$(sqlite3 /autoqc/AutoQC/iquod.db "select count(*) from $filename;")
+    count=$(sqlite3 "$AUTO_QC_HOME/AutoQC/iquod.db" "select count(*) from $filename;")
     if [ $count -ne 0 ]; then
       ./qc-one.sh "$filename" 4
       set +e
